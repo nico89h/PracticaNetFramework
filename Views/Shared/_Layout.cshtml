@@ -11,11 +11,17 @@
     @Scripts.Render("~/bundles/bootstrap")
 </head>
 <body>
+    @{
+        if (ViewBag.Message==null)
+        {
+            ViewBag.Message = "NET FRAMEWORK";
+        }
+    }
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
             <a class="navbar-brand" href="#">
                 <img src="~/Content/Images/dotnet-logo.svg" width="30" height="30" alt="">
-                NET Framework
+                @ViewBag.Message
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -24,13 +30,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        @Html.ActionLink("Inicio", "Index", "Home", new { @class = "nav-link" })
+                        @Html.ActionLink("Inicio", "Index", "Administration", new { @class = "nav-link" })
                     </li>
                     <li class="nav-item">
-                        @Html.ActionLink("Acerca de", "About", "Home", new { @class = "nav-link" })
-                    </li>
-                    <li class="nav-item">
-                        @Html.ActionLink("Contacto", "Contact", "Home", new { @class = "nav-link" })
+                        @Html.ActionLink("Sobre nosotros", "About", "Administration", new { @class = "nav-link" })
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">

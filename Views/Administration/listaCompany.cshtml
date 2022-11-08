@@ -1,0 +1,36 @@
+﻿@model NetFramework.Company
+
+@{
+    ViewBag.Title = "listaCompany"; 
+    ViewBag.Message = Model.name;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<h2>listaCompany</h2>
+
+<div>
+    <h4>Company</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Inicio", "Index")
+</p>
