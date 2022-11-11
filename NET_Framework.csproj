@@ -130,6 +130,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdministrationController.cs" />
+    <Compile Include="Controllers\CompanyController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -277,10 +278,12 @@
     <Content Include="Views\Administration\Index.cshtml" />
     <Content Include="Views\Administration\About.cshtml" />
     <Content Include="Views\Administration\listaCompany.cshtml" />
+    <Content Include="Views\Administration\CreateProductos.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Company\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
